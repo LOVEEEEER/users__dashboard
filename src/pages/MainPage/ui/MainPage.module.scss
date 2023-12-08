@@ -10,8 +10,15 @@
   border-bottom: 1px solid rgb(228, 227, 227);
 }
 
-.search_icon {
-  margin-right: 20px;
+.search {
+  &_icon {
+    margin-right: 20px;
+  }
+  &_block {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .list {

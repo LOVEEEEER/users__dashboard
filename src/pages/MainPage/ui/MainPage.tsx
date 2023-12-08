@@ -1,16 +1,25 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import styles from "./MainPage.module.scss";
 import { Button } from "@/shared/ui/Button/Button";
-import searchIcon from "@/shared/assets/icons/search.svg";
 import { UserItem } from "@/entities/user/UserItem";
+import { UsersSearch } from "@/features/UsersSearch";
+import { useDebouncedCallback } from "use-debounce";
 
 const MainPage: FC = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleSearchQuery = useDebouncedCallback((value: string) => {
+    setSearchQuery(value);
+  }, 300);
+
+  const searchedItems = [];
+
   return (
     <div>
       <div className={styles.head}>
         <h1 className={styles.title}>Команда</h1>
-        <div>
-          <img className={styles.search_icon} src={searchIcon} alt="search" />
+        <div className={styles.search_block}>
+          <UsersSearch onSearchQuery={handleSearchQuery} />
           <Button>Добавить пользователя</Button>
         </div>
       </div>

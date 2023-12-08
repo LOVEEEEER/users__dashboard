@@ -1,0 +1,18 @@
+.search_container {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.input {
+  display: none;
+  transition: all 0.3s ease;
+  position: absolute;
+  right: -5px;
+  top: -8px;
+}
+
+input.open {
+  display: block;
+  width: 30vw;
+}
