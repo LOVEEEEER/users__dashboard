@@ -1,19 +1,17 @@
 .Sidebar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
   padding-top: 25px;
   padding-left: 20px;
   padding-right: 20px;
   background: #F9FAFB;
-  transition: width 2s easy;
+  width: 100px;
+  transition: width 0.3s ease-in-out;
 
   &:hover {
-    width: 212px;
+    width: var(--sidebar-width-collapsed);
     align-items: flex-start;
 
     .logo {
@@ -58,12 +56,12 @@
     height: 60px;
   }
   &_name {
-    color: #424F5E;
-    font-size: 16px;
+    font-size: var(--font-size-m);
+    color: var(--secondary-color);
     font-weight: 500;
   }
   &_job {
-    color: #9494A0;
+    color: var(--main-color);
     font-size: 14px;
     font-weight: 400;
   }
@@ -85,8 +83,7 @@
   }
   &_name {
     display: none;
-    color: #9494A0;
-    font-size: 16px;
+    color: var(--main-color);
     font-weight: 450;
   }
   &_icon {

@@ -1,15 +1,14 @@
 @import "../../shared/assets/fonts/stylesheet.css";
+@import "./reset.scss";
+@import "./variables/global.scss";
+
+.app {
+  min-height: 100vh;
+  font-family: Futura PT;
+  background: #EBEBF0;
+}
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
 }
 
-body {
-  font-family: Futura PT;
-}
-
-ul {
-  list-style: none;
-}

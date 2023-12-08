@@ -1,13 +1,14 @@
-import { Sidebar } from "@/widgets/Sidebar";
 import { AppRouter } from "./providers/router";
+import { Layout } from "@/shared/ui/layout";
 import "./styles/index.scss";
 
 const App = () => {
   return (
-    <>
-      <AppRouter />
-      <Sidebar />
-    </>
+    <div className="app">
+      <Layout>
+        <AppRouter />
+      </Layout>
+    </div>
   );
 };
 

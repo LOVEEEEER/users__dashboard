@@ -1,0 +1,46 @@
+.UserItem {
+  display: flex;
+  align-items: center;
+  &:not(:last-child) {
+    margin-bottom: 36px;
+  }
+}
+
+.bio {
+  display: flex;
+  align-items: center;
+  margin-bottom: 9px;
+}
+
+.name {
+  margin-right: 9px;
+  color: var(--secondary-color);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.avatar {
+  margin-right: 11px;
+}
+
+.email {
+  color: var(--main-color);
+  font-weight: 450;
+}
+
+.options {
+  display: flex;
+}
+
+.option {
+  padding: 5px 15px;
+  color: var(--main-color);
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 10px;
+  border: 1px solid #C1C1CB;
+
+  &:not(:last-child) {
+    margin-right: 5px;
+  }
+}
