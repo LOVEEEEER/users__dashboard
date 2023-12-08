@@ -6,10 +6,10 @@ import userIcon from "@/shared/assets/icons/user.png";
 interface UserItemProps {
   name: string;
   email: string;
-  options: string[];
+  permissions: string[];
 }
 
-export const UserItem: FC<UserItemProps> = ({ name, email, options }) => {
+export const UserItem: FC<UserItemProps> = ({ name, email, permissions }) => {
   return (
     <div className={styles.UserItem}>
       <Avatar src={userIcon} className={styles.avatar} />
@@ -19,7 +19,7 @@ export const UserItem: FC<UserItemProps> = ({ name, email, options }) => {
           <span className={styles.email}>{email}</span>
         </div>
         <ul className={styles.options}>
-          {options.map((option) => (
+          {permissions.map((option) => (
             <li className={styles.option} key={option}>
               {option}
             </li>
