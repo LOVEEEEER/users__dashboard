@@ -3,5 +3,94 @@
   left: 0;
   top: 0;
   bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
   background: #F9FAFB;
+  transition: width 2s easy;
+
+  &:hover {
+    width: 212px;
+    align-items: flex-start;
+
+    .logo {
+      display: none;
+    }
+
+    .user {
+      align-items: center;
+      &_icon {
+        margin-right: 13px;
+        width: 55px;
+        height: 55px;
+      }
+      &_info {
+        display: block;
+      }
+    }
+
+    .item {
+      &_name {
+        display: block;
+      }
+      &_icon {
+        margin-right: 17px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+.logo {
+  margin-bottom: 26px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 26px;
+  &_icon {
+    width: 60px;
+    height: 60px;
+  }
+  &_name {
+    color: #424F5E;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  &_job {
+    color: #9494A0;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  &_info {
+    display: none;
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  &:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+  &:not(:last-child) {
+    margin-bottom: 26px;
+    transition: opacity 0.3s linear;
+  }
+  &_name {
+    display: none;
+    color: #9494A0;
+    font-size: 16px;
+    font-weight: 450;
+  }
+  &_icon {
+    width: 25px;
+    height: 25px;
+  }
 }
